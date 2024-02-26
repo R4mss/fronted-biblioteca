@@ -85,3 +85,33 @@ export const DocumentWrite = (props: any) => {
         </svg>
     )
 }
+
+export const EngIcon = (props: any) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" {...props}>
+            <rect width="24" height="24" fill="#012169" />
+            <path fill="#FFF" d="M9.22 13.08l5.23-3.54-5.23-3.54L12 6.5l-2.77 1.88L12 10.25zm5.27-3.54L14.46 12l1.03.73L16 12l-.27-.18 1.03-.73zm1.03 1.46l-1.03.73V11.54zm-7.3 0l1.03-.73v1.46l-1.03-.73zm-1.46 0l-1.03.73.01 1.46 1.02-.73-.01-1.46zm-1.84 0l1.02-.73.01 1.46-1.02.73-.01-1.46zm-2.77 0L3 12l2.77-1.88-.01 3.76L3 12l2.77-1.88zm2.77-2.77L6.5 9.22l1.88-2.77 3.76.01L12 6.5 10.25 9.22zm0-5.94L9.22 5.14l-3.76-.01L6.5 3.78l3.76.01zm0 11.88L6.5 14.78l1.88 2.77-1.88 2.77 3.76-.01zm0-5.94L9.22 18.86l-3.76-.01L6.5 17.5l3.76.01zm0-5.94L6.5 8.86l1.88 2.77-1.88 2.77 3.76-.01zM6.5 3.78L9.22 6.5 6.5 9.22 3.78 6.5 6.5 3.78z" />
+        </svg>
+    );
+}
+
+
+export const EspIcon = (props: any) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="24" height="24">
+            <path fill="#FFDA44" d="M0 0h640v480H0z" />
+            <path fill="#D80027" d="M0 0h213.33v480H0z" />
+            <path fill="#D80027" d="M426.67 0H640v480H426.67z" />
+        </svg>
+    )
+}
+
+export const PortIcon = (props: any) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+            <path fill="#FFD500" d="M0 0h512v170.67H0z" />
+            <path fill="#000" d="M0 341.33h512V512H0z" />
+            <path fill="#006" d="M0 170.67h512v170.66H0z" />
+        </svg>
+    )
+}
