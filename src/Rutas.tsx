@@ -4,21 +4,31 @@ import Inicio from './view/inicio/Inicio';
 import Acceso from './view/acceso/Acceso';
 import NotFound from './view/pages/404/NotFound';
 import Home from "./view/inicio/Home"
+import Busqueda from './view/biblioteca/prestamo/Busqueda';
+import SolicitudesPrestamo from './view/biblioteca/prestamo/SolicitudesPrestamos';
 // 
 
 
 const router = createBrowserRouter([
   {
     path: '/inicio',
-    element: <Navigate to="centro-idiomas" replace />
+    element: <Navigate to="biblioteca" replace />
   },
   {
     path: '/inicio/*',
     element: <Inicio />,
     children: [
       {
-        path: 'centro-idiomas',
+        path: 'biblioteca',
         element: <Home />
+      },
+      {
+        path: 'busqueda-libro',
+        element: <Busqueda />
+      },
+      {
+        path: 'solicitudes',
+        element: <SolicitudesPrestamo />
       },
       {
         path: '*',
