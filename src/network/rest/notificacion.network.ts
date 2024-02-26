@@ -1,7 +1,7 @@
 import axios from 'axios';
-import Response from '../../model/class/response.model.class';
-import Resolve from '../../model/class/resolve.model.class';
-import RestError from '../../model/class/resterror.model.class';
+import Response from '@/model/class/response.model.class';
+import Resolve from '@/model/class/resolve.model.class';
+import RestError from '@/model/class/resterror.model.class';
 
 const instance = axios.create({
     baseURL: import.meta.env.VITE_API_NOTIFICACION,

@@ -13,20 +13,20 @@ export const notifeSlice = createSlice({
     name: 'notifications',
     initialState,
     reducers: {
-        addNotification: (state, action: PayloadAction<Notificacion>) => {        
+        addNotification: (state, action: PayloadAction<Notificacion>) => {
             state.notifications.push(action.payload);
         },
-        removeNotification : (state, action : PayloadAction<{ id: string }>) => {
+        removeNotification: (state, action: PayloadAction<{ id: string }>) => {
             state.notifications = state.notifications.filter(
                 (notification) => notification.id !== action.payload.id
-              );
+            );
         },
-        clearNotifications : (state) => {
+        clearNotifications: (state) => {
             state.notifications = [];
         }
     },
 })
 
-export const { addNotification, removeNotification, clearNotifications} = notifeSlice.actions
+export const { addNotification, removeNotification, clearNotifications } = notifeSlice.actions
 
 export default notifeSlice.reducer

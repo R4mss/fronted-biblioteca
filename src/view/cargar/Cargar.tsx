@@ -3,7 +3,7 @@ import '../../assets/css/loader.css';
 import Response from "../../model/class/response.model.class";
 import { useDispatch } from 'react-redux';
 import { restore, starting } from '../../store/authSlice.store';
-import { ValidarTokenRest } from '../../network/rest/services.network';
+import { ValidarTokenRest } from '../../network/rest/service.network';
 import { images } from '../../helper/index.helper';
 
 const Cargar = () => {

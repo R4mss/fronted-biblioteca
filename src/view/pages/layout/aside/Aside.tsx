@@ -6,6 +6,9 @@ import Overlay from "./widget/Overlay";
 import Body from "./widget/Body";
 import EstudianteLogin from "../../../../model/interfaces/login/estudiante.login";
 import TrabajadorLogin from "../../../../model/interfaces/login/trabajador.login";
+import { MenuItem, menusAdmin } from "@/helper/menu.helper";
+//import { useSelector } from "react-redux";
+//import { RootState } from "@/store/configureStore.store";
 
 
 type Props = {
@@ -17,149 +20,11 @@ type Props = {
     onEventOverlay: React.MouseEventHandler,
 }
 
-type MenuItem = {
-    id: string,
-    titulo: string,
-    url?: string,
-    icono: string,
-    moduPadre: boolean,
-    modPosicion: number,
-    subMenu: boolean,
-    subMenuItems?: MenuItem[]
-}
-
-const menusAdmin: MenuItem[] = [
-    {
-        id: "1",
-        titulo: "Inicio",
-        url: "/inicio/centro-idiomas",
-        icono: "bi-house-fill",
-        moduPadre: true,
-        modPosicion: 1,
-        subMenu: false,
-        subMenuItems: []
-    },
-    {
-        id: "2",
-        titulo: "Opciones",
-        icono: "bi-gear-fill",
-        moduPadre: true,
-        modPosicion: 2,
-        subMenu: true,
-        subMenuItems: [
-            {
-                id: "1",
-                titulo: "Registro de Horarios",
-                url: "/inicio/horario-idiomas",
-                icono: "bi-calendar-week",
-                moduPadre: false,
-                modPosicion: 1,
-                subMenu: false,
-            },
-            {
-                id: "2",
-                titulo: "Registro de Notas",
-                url: "/inicio/buscar-aulas-asignaturas",
-                icono: "bi-card-checklist",
-                moduPadre: false,
-                modPosicion: 2,
-                subMenu: false,
-            },
-            {
-                id: "3",
-                titulo: "Registro de Calendario",
-                url: "/inicio/calendario",
-                icono: "bi-calendar2-check",
-                moduPadre: false,
-                modPosicion: 3,
-                subMenu: false,
-            },
-        ]
-    },
-    {
-        id: "1",
-        titulo: "Reportes",
-        icono: "bi-card-list",
-        moduPadre: true,
-        modPosicion: 3,
-        subMenu: true,
-        subMenuItems: [
-            {
-
-                id: "1",
-                titulo: "Reporte General",
-                url: "/inicio/Reportes",
-                icono: "bi-file-text-fill",
-
-                moduPadre: false,
-                modPosicion: 2,
-                subMenu: false,
-            },
-            {
-                id: "2",
-                titulo: "Reportes filtros",
-                url: "/inicio/Reportes-Filtros",
-                icono: "bi-file-text-fill",
-                moduPadre: false,
-                modPosicion: 2,
-                subMenu: false,
-            },
-            {
-                id: "3",
-                titulo: "Buscar Aula Excel",
-                url: "/inicio/buscar-aulas-asignaturas-excel",
-                icono: "bi-file-text-fill",
-                moduPadre: false,
-                modPosicion: 2,
-                subMenu: false,
-            },
-        ]
-    },
-]
-
-const menusEst: MenuItem[] = [
-    {
-        id: "1",
-        titulo: "Inicio",
-        url: "/inicio/centro-idiomas",
-        icono: "bi-house-fill",
-        moduPadre: true,
-        modPosicion: 1,
-        subMenu: false,
-        subMenuItems: []
-    },
-    {
-        id: "2",
-        titulo: "Opciones",
-        icono: "bi-gear-fill",
-        moduPadre: true,
-        modPosicion: 1,
-        subMenu: false,
-        subMenuItems: [
-            {
-                id: "1",
-                titulo: "Matricula",
-                url: "/inicio/matricula-interna",
-                icono: "bi-pencil-square",
-                moduPadre: false,
-                modPosicion: 1,
-                subMenu: false,
-            },
-
-
-        ],
-    },
-]
-
-
 const Aside = (props: Props) => {
 
-    // const tipoUser = window.localStorage.getItem("tipoUsuario")
-    // const cod = window.localStorage.getItem("codigo")
-    const tipoUser = window.localStorage.getItem("tipoUsuario")?.replace(/"/g, '');
+    //const tipoUsuario = useSelector((state: RootState) => state.autenticacion.tipoUsuario)
 
-
-    const menus: MenuItem[] = tipoUser == "est" ? menusEst : menusAdmin
+    const menus: MenuItem[] = menusAdmin
 
 
     return (

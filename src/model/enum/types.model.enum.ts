@@ -4,3 +4,10 @@ export enum Types{
     CANCELED = "CANCELED",
     ERROR = "ERROR"
 }
+
+export enum TipUser{
+    ADMIN = "admin",
+    EST = "est"
+}
+
+

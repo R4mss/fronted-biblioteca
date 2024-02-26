@@ -9,23 +9,24 @@ import { css, images } from '../../helper/index.helper';
 
 import { useEffectOnce } from 'react-use';
 import { Toaster } from 'react-hot-toast';
-import EstudianteLogin from '../../model/interfaces/login/estudiante.login';
+
 import TrabajadorLogin from '../../model/interfaces/login/trabajador.login';
 
 type Props = {
     cargando: boolean,
-    informacion: EstudianteLogin | TrabajadorLogin | undefined,
+    informacion: TrabajadorLogin | undefined,
 }
 
 const Contenido = (props: Props) => {
 
-    const location = useLocation();
-
+    
     const autenticado = useSelector((state: RootState) => state.autenticacion.autenticado)
 
     if (!autenticado) {
         return <Navigate to="/acceso" />
     }
+
+    const location = useLocation();
 
     const refAside = useRef<HTMLInputElement>(null);
 
@@ -169,7 +170,6 @@ const Contenido = (props: Props) => {
                     {/*  */}
                     <Toaster />
                 </div>
-                // )
             }
 
 
