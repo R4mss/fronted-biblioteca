@@ -1,0 +1,31 @@
+export default interface HorarioDisponible {
+    horarioAsigId: number;
+    horarioId: number;
+    detHorarioId: number;
+    idiomaId: number;
+    idiomaNombre: string;
+    programaId: number;
+    programa: string;
+    modalidadId: number;
+    modalidad: string;
+    tipEstudioId: number;
+    tipoEstudio: string;
+    seccion: string;
+    dia: number;
+    horaIni: string;
+    horaFin: string;
+    capacidad: number;
+    aulasId: number;
+    aula: string;
+    nombre: string;
+    asiId: string;
+    asiNivel: string;
+    asignatura: string;
+    cantidad: number;
+    sedeId: string;
+    sede: string;
+    periodoId: number;
+    anio: number;
+    mes: number;
+    turno: string;
+}
