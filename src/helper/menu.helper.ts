@@ -34,8 +34,18 @@ export const menusAdmin: MenuItem[] = [
 
             {
                 id: "1",
-                titulo: "Registro de .....",
-                url: "/inicio/registro",
+                titulo: "Registro de Solicituds",
+                url: "/inicio/solicitudes",
+                icono: "bi-calendar-week",
+                moduPadre: false,
+                modPosicion: 1,
+                subMenu: false,
+                tipoUser: "admin",
+            },
+            {
+                id: "1",
+                titulo: "Busqueda de Libros",
+                url: "/inicio/busqueda-libro",
                 icono: "bi-calendar-week",
                 moduPadre: false,
                 modPosicion: 1,
