@@ -47,7 +47,6 @@ const menusAdmin: MenuItem[] = [
         modPosicion: 2,
         subMenu: true,
         subMenuItems: [
-
             {
                 id: "1",
                 titulo: "Registro de Horarios",
@@ -66,7 +65,6 @@ const menusAdmin: MenuItem[] = [
                 modPosicion: 2,
                 subMenu: false,
             },
-
             {
                 id: "3",
                 titulo: "Registro de Calendario",
@@ -76,7 +74,6 @@ const menusAdmin: MenuItem[] = [
                 modPosicion: 3,
                 subMenu: false,
             },
-
         ]
     },
     {
