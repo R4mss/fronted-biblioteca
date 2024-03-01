@@ -5,8 +5,7 @@ import { ItemFiltro } from "@/model/interfaces/biblioteca/item";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
-const Busqueda = () => {
-
+const BusquedaBien = () => {
     const navigate = useNavigate()
 
     const [ubicacion, setUbicacion] = useState<number | string>(0)
@@ -197,4 +196,4 @@ const Busqueda = () => {
         </div>
     )
 }
-export default Busqueda
+export default BusquedaBien

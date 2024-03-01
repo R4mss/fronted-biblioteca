@@ -31,7 +31,6 @@ export const menusAdmin: MenuItem[] = [
         subMenu: true,
         tipoUser: "admin",
         subMenuItems: [
-
             {
                 id: "1",
                 titulo: "Registro de Solicituds",
@@ -43,12 +42,32 @@ export const menusAdmin: MenuItem[] = [
                 tipoUser: "admin",
             },
             {
-                id: "1",
+                id: "2",
                 titulo: "Busqueda de Libros",
                 url: "/inicio/busqueda-libro",
                 icono: "bi-calendar-week",
                 moduPadre: false,
-                modPosicion: 1,
+                modPosicion: 2,
+                subMenu: false,
+                tipoUser: "admin",
+            },
+            {
+                id: "3",
+                titulo: "Solicitud de bienes",
+                url: "/inicio/solicitudes-bien",
+                icono: "bi-calendar-week",
+                moduPadre: false,
+                modPosicion: 3,
+                subMenu: false,
+                tipoUser: "admin",
+            },
+            {
+                id: "4",
+                titulo: "Busqueda de Bienes",
+                url: "/inicio/busqueda-bien",
+                icono: "bi-calendar-week",
+                moduPadre: false,
+                modPosicion: 4,
                 subMenu: false,
                 tipoUser: "admin",
             },
